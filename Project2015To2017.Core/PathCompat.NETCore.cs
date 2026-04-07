@@ -5,7 +5,7 @@ namespace Project2015To2017
 {
 	public static partial class PathCompat
 	{
-#if NET6_0
+#if NET8_0
 		/// <summary>
 		/// Create a relative path from one path to another. Paths will be resolved before calculating the difference.
 		/// Default path comparison for the active platform will be used (OrdinalIgnoreCase for Windows or Mac, Ordinal for Unix).
@@ -18,7 +18,7 @@ namespace Project2015To2017
 		{
 			return Path.GetRelativePath(relativeTo, path);
 		}
-#elif !(NETSTANDARD2_0 || NET461)
+#elif !(NETSTANDARD2_ || NET461)
 #error "Revise conditional compilation clauses"
 #endif
 	}

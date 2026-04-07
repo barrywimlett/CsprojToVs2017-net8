@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks Condition="$(Pack) != 'true'">net461;net6.0</TargetFrameworks>
-	<TargetFramework Condition="$(Pack) == 'true'">net6.0</TargetFramework>
-	<PackAsTool Condition="$(Pack) == 'true'">True</PackAsTool>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+
+	<TargetFrameworks>$(Tool_TargetFrameworks)</TargetFrameworks>
+	  <PackAsTool>true</PackAsTool>
 
 	<AssemblyName>dotnet-migrate-2019</AssemblyName>
 	<PackageId>Project2015To2017.Migrate2019.Tool</PackageId>
