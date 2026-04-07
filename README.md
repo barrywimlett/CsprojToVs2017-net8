@@ -20,9 +20,14 @@ There are a number of things [that VS2017+ handles differently](http://www.natem
 5. Defining the NuGet package definition as part of the project file
 
 ## Quick Start
-Assuming you have .NET Core 2.1+ installed you can run this on the command line:
+Assuming you have .NET Core 2.1+ installed you can run this on the command line to install the tool from nuget.org
 ```
 dotnet tool install --global Project2015To2017.Migrate2019.Tool
+```
+
+**The following command will install the tool from the local build.**
+```
+dotnet tool install --global --add-source ./Project2015To2017.Migrate2019.Tool/bin/Release/ Project2015To2017.Migrate2019.Tool --version 4.3.0
 ```
 
 This will install the tool for you to use it anywhere you would like. You can then call the tool as shown in the examples below.
